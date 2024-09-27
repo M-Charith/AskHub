@@ -1,4 +1,4 @@
-# AskHub
+# Community Question Answer
 
 This project is a community-driven Q&A website that allows users to ask questions, post answers, comment, and engage in discussions with features like upvotes/downvotes, search functionality with auto-completion, persistent user sessions, and authentication.
 
