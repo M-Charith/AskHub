@@ -1,42 +1,74 @@
 # Community Question Answer
 
-This project is a community-driven Q&A website that allows users to ask questions, post answers, comment, and engage in discussions with features like upvotes/downvotes, search functionality with auto-completion, persistent user sessions, and authentication.
+This is a web-based project designed to mimic a community question-answer website.
 
-## Features
+## Author
 
-- **User Authentication**: Users can sign up, log in, and log out.
-- **CRUD Operations**: Create, Read, Update, and Delete functionality for posts and comments.
-- **Upvotes & Downvotes**: Users can vote on posts and comments.
-- **Search Functionality**: Search for posts with auto-completion.
-- **Persistent Sessions**: User sessions are maintained to avoid repeated logins.
+- [@M-Charith](https://www.github.com/M-Charith)
 
-## Technologies Used
+## Tech Stack
 
-- **Frontend**: 
-  - React.js
-  - HTML
-  - CSS
+**Frontend:** HTML, CSS, JavaScript
 
-- **Backend**: 
-  - Express.js (Node.js)
+**Backend:** JavaScript (Node.js)
 
-- **Database**: 
-  - PostgreSQL
+**Database:** PostgreSQL
 
-## Getting Started
+## Installation, Usage, and Maintenance
 
-### Prerequisites
+### Installing the Project
 
-Ensure you have the following installed on your machine:
+Clone the CQA project files into your local directory using `git clone`. Run:
 
-- [Node.js](https://nodejs.org/en/download/) (LTS version recommended)
-- [PostgreSQL](https://www.postgresql.org/download/)
-- [Git](https://git-scm.com/)
+git clone https://github.com/M-Charith/CQA
+### Prerequisite
 
-### Installation
+Your local Machine must have PostgreSQL installed and pgAdmin(preferably for excuting .sql scripts, or you could execute them from the terminal too.)
 
-1. **Clone the repository**:
+Create a Local PostgreSQL connection of SQL server in your machine with :
 
-   ```bash
-   git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
+    username: "postgres"
+    password: "1234"
+    Hostname: "localhost"
+    port: 5432
+    Connection name: "cqadb"
+
+Run the following script to set up the database with tables:
+
+    script.sql
+
+Run the following script to populate the initially necessary tables:
+
+    populate.sql
+
+Note: This population only corresponds to the possible tags. If you feel more tags are necessary, you could add more with the same syntax as the others.
+
+Run the following script to delete all the tables in the database:
+
+    delete.sql
+
+### Installing the required node modules
+
+On cloning the project in to your local machine, change your directory into the 'backend' directory and run the following code:
+
+    npm install
+
+Change your directory into the 'client' directory and run the following code: 
+
+    npm install
+
+This will install all the required node modules for frontend as well as the backend.
+
+### Usage
+
+Run the following code in the 'backend' directory to start the backend.
+
+    nodemon index.js
+
+You would be able to see a message on terminal 'server up!' conforming the same.
+
+Now run the following code in the 'frontend' directory to start the application.
+
+    npm start
+
+If you don't see a webpage open up, open a browser and browse for "localhost:3000".
